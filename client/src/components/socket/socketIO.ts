@@ -9,9 +9,4 @@ export class SocketIO {
     private constructor() {
         this.socket = io("https://avangardio-1.ru/");
         }
-
-
-    public sda():void {
-        //...
-    }
 }
