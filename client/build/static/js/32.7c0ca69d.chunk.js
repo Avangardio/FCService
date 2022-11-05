@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkCLient_app=self.webpackChunkCLient_app||[]).push([[32],{3032:function(n,t,e){e.r(t),e.d(t,{default:function(){return r}});var o=e(2791),i=e(4569),a=e.n(i),u=e(6871),c=e(184);function r(){var n=(0,u.s0)();return(0,o.useEffect)((function(){a()({method:"get",url:"https://avangardio-1.ru/account/logout",withCredentials:!0}).then((function(t){n("/"),window.location.reload()})).catch((function(n){window.location.reload()}))}),[]),(0,c.jsx)("div",{children:"Loading"})}}}]);
+//# sourceMappingURL=32.7c0ca69d.chunk.js.map
