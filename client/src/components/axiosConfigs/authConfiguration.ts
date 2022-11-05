@@ -1,6 +1,5 @@
-
 export const authConfiguration = () => ({
     method: "get",
-    url: "http://localhost:8080/account/auth",
+    url: "https://avangardio-1.ru/account/auth",
     withCredentials: true,
 });
