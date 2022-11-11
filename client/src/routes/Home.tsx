@@ -8,7 +8,7 @@ export default function Home() {
         month: 'long',
         day: 'numeric'
     });
-//pl33
+//pl228
     return (
         <div>
             Добро пожаловать на сайт проекта Friends Club!
