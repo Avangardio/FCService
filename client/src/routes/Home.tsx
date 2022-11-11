@@ -1,24 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 
-export default function Home(){
+export default function Home() {
 
-    const [data, dataUpdate] = useState({data:''});
+    const [data, dataUpdate] = useState({data: ''});
+    const today = new Date().toLocaleString('ru', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
 
-
-    useEffect(() => {
-        async function fetchData() {
-            let response =  await fetch('http://localhost:8080/home/');
-            let fetchedData = await response.text();
-            dataUpdate({data: `${fetchedData}`});
-
-        };
-        fetchData().catch(error => {console.log(error); dataUpdate({data: 'Server Unavaible'})});
-    }, []);
-
-    return(
+    return (
         <div>
-            <p>This is a HOME page :)</p>
-            <p>{data.data}</p>
+            Добро пожаловать на сайт проекта Friends Club!
+            Сегодня {today}
+            Код проекта и прочее можно найти <a href={"https://github.com/Avangardio/FCService"} target={'_blank'}>здесь</a>.
+            Почта для связи с автором: <b>avangardio1458@gmail.com</b>.
         </div>
     )
 }
