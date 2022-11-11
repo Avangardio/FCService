@@ -15,6 +15,7 @@ export default function Home() {
             Сегодня {today}
             Код проекта и прочее можно найти <a href={"https://github.com/Avangardio/FCService"} target={'_blank'}>здесь</a>.
             Почта для связи с автором: <b>avangardio1458@gmail.com</b>.
+            Благодарю, хорошего дня!
         </div>
     )
 }
