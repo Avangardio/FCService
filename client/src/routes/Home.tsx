@@ -8,7 +8,6 @@ export default function Home() {
         month: 'long',
         day: 'numeric'
     });
-    //1321
 
     return (
         <div>
