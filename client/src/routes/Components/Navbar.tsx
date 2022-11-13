@@ -46,9 +46,6 @@ export default function Navbar() {
 
     let userElement;
 
-    //if(userId) userElement = uId ? <p className="userIn" >{'Welcome: ' + uId}</p> : <p className="userGuest" >{"ЗДравствуй десперато..."}</p>
-
-
     return(
         <div className={isDesktopOrMobile ? 'Navbar-Desktop' : "Navbar-Mobile"}>
             <ol className={isDesktopOrMobile ? 'Navbar-Desktop' : "Navbar-Mobile"}>{navPaths}</ol>
@@ -56,4 +53,3 @@ export default function Navbar() {
             );
 }
 
-//TODO: попробовать сделать список хуйни и ченить срендерить
