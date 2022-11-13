@@ -9,6 +9,11 @@ div.AppHeader {
     white-space: nowrap;
 
 }
+div.Cabinet {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 
 div.FindUsersInput.Mobile {
 
