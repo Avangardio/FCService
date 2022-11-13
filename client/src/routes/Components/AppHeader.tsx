@@ -31,31 +31,33 @@ export default function AppHeader(){
 
     if(user) {
         pageCabinet = (
-            <div>
+            <>
                 <img className='ChatHeaderImage' src={user.profilePhoto}/>
-                <div className='Cabinet'>
-                    <span>{"Привет, " + user.firstName}</span>
-                    <a onClick={() => navigate(`/${uId}`)}>Моя Страница</a>
-                    <a onClick={() => navigate(`/logout`)}>Выйти</a>
+                <div>
+                    <div className='Cabinet'>
+                        <span>{"Привет, " + user.firstName}</span>
+                        <a onClick={() => navigate(`/${uId}`)}>Моя Страница</a>
+                        <a onClick={() => navigate(`/logout`)}>Выйти</a>
+                    </div>
                 </div>
-            </div>
+            </>
         )
     }
 
     return (
-      <div className={isDesktopOrMobile ? 'AppHeader': 'AppHeader Mobile'}>
-          <div onClick={event => navigate('/')}>
-          <img className='LogoHeader' src={'LogoHeader.svg'}/>
-          </div>
-          {isDesktopOrMobile ? <img className='TextHeader' src={'TextHeader.svg'}/> : null}
-          <FindUsersChat source={'app'}/>
-          {isDesktopOrMobile ? (pageCabinet ||
-              <div className='Cabinet'>
-                  <span>Привет, Гость!</span>
-                  <div onClick={() => navigate(`/login`)}>Войти</div>
-                  <div onClick={() => navigate(`/registration`)}>Зарегистрироваться</div>
-              </div>)
-          : null}
-      </div>
+        <div className={isDesktopOrMobile ? 'AppHeader': 'AppHeader Mobile'}>
+            <div onClick={event => navigate('/')}>
+                <img className='LogoHeader' src={'LogoHeader.svg'}/>
+            </div>
+            {isDesktopOrMobile ? <img className='TextHeader' src={'TextHeader.svg'}/> : null}
+            <FindUsersChat source={'app'}/>
+            {isDesktopOrMobile ? (pageCabinet ||
+                    <div className='Cabinet'>
+                        <span>Привет, Гость!</span>
+                        <div onClick={() => navigate(`/login`)}>Войти</div>
+                        <div onClick={() => navigate(`/registration`)}>Зарегистрироваться</div>
+                    </div>)
+                : null}
+        </div>
     );
 }

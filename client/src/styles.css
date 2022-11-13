@@ -2,14 +2,27 @@
 }
 
 /*AppHeader*/
-
 div.AppHeader {
     background-color: #94bd35;
     border-bottom: #4d6c0b solid 1px;
     white-space: nowrap;
-
 }
-
+div.AppHeader div.Wrapper{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+div.AppHeader img.ChatHeaderImage {
+    float: none;
+    position: absolute;
+    right: 230px;
+    top: 10px;
+}
+div.Cabinet {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
 div.FindUsersInput.Mobile {
 
 }
