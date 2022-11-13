@@ -2,27 +2,25 @@
 }
 
 /*AppHeader*/
+div.AppHeader img.ChatHeaderImage {
+    float: none;
+    position: absolute;
+    top: 10px;
+    right: 230px;
+}
 div.AppHeader {
     background-color: #94bd35;
     border-bottom: #4d6c0b solid 1px;
     white-space: nowrap;
 }
-div.AppHeader div.Wrapper{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-div.AppHeader img.ChatHeaderImage {
-    float: none;
-    position: absolute;
-    right: 230px;
-    top: 10px;
-}
 div.Cabinet {
     position: absolute;
-    right: 20px;
     top: 20px;
+    right: 20px;
 }
+
+
+
 div.FindUsersInput.Mobile {
 
 }
@@ -93,7 +91,8 @@ div.ChatMessageField  * {
 div.AppRoutes.Desktop {
     display: inline-block;
     vertical-align: top;
-    margin-top: 2vh;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 div.AppRoutes.Mobile {
     width: 100vw;
@@ -220,7 +219,7 @@ NewMessageNotification {
     margin-bottom: 2vh;
     z-index: 999;
     pointer-events: all;
-    pointer-events: all
+    background-color: #eaeaea;
 }
 div.NewMessageNotification >  div.HeaderContainer > img {
     display: inline-block;
@@ -505,7 +504,7 @@ div.ChatOverall.Mobile{
     display: block;
     min-width: unset;
     margin-bottom: 50px;
-
+    min-width: 200px;
 }
 
 div.CurrentChat{
@@ -517,6 +516,7 @@ div.ChatOverall:not([class*="Mobile"]){
     overflow: auto;
     border-right: solid 1px #4d6c0b;
     border-left: solid 1px #4d6c0b;
+    margin-top: 2vh;
 }
 
 div.CurrentChat.Mobile {
