@@ -59,7 +59,7 @@ class PageController {
                     console.log(error);
                     response.status(400).send({message: "Error creating page"})
                 })
-            eventHandler.emit('event');
+            eventHandler.emit('redisUpdate');
             return;
         }
 
