@@ -3,7 +3,10 @@
 
 /*AppHeader*/
 div.AppHeader img.ChatHeaderImage {
-    right: 250px;
+    float: none;
+    position: absolute;
+    top: 10px;
+    right: 230px;
 }
 div.AppHeader {
     background-color: #94bd35;
