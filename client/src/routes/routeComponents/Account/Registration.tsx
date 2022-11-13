@@ -29,7 +29,7 @@ export default function Registration() {
                 }
             })
             .catch((error) => {
-                setRegResponse(error.response.data.message)
+                setRegResponse("Данные не подходят")
             });
     };
 

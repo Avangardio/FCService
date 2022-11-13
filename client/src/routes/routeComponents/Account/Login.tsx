@@ -29,22 +29,21 @@ export default function Login(){
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // make the API call
-                axios(loginConfiguration(email, password))
-                    .then((response) => {
-                        if(!response.data.registrationCompleted) {
-                            setNewId(response.data.user);
-                            setNextStep(true);
-                            return;
-                        }
-                            dispatch(allActions.authUser(response.data.uId, response.data.registrationCompleted));
-                            setLoginResponse('Login Success');
-                            window.location.reload();
-                    })
-                    .catch((error) => {
-                        console.log(error)
-                        setLoginResponse(error.response.data.message);
-                    });
+        axios(loginConfiguration(email, password))
+            .then((response) => {
+                if(!response.data.registrationCompleted) {
+                    setNewId(response.data.user);
+                    setNextStep(true);
+                    return;
+                }
+                dispatch(allActions.authUser(response.data.uId, response.data.registrationCompleted));
+                setLoginResponse('Успех');
+                window.location.reload();
+            })
+            .catch((error) => {
+                console.log(error)
+                setLoginResponse(error.response.data.message);
+            });
     };
     if(nextStep) return (<RegistrationFinish userId={newId}/>);
     return(
