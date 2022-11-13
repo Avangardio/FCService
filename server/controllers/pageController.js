@@ -53,20 +53,20 @@ class PageController {
             redisClient.set(update.uId, JSON.stringify(update));
             await page.save()
                 .then(result => {
-                    response.status(201).send({message: "Page Created Success"})
+                    response.status(201).send({message: "Создание страницы успешно!"})
                 })
                 .catch(error => {
                     console.log(error);
-                    response.status(400).send({message: "Error creating page"})
+                    response.status(400).send({message: "Ошибка"})
                 })
-            eventHandler.emit('event');
+            eventHandler.emit('redisUpdate');
             return;
         }
 
         redisClient.set(update.uId, JSON.stringify(update));
         await Page.findOneAndUpdate({uId: user}, update)
             .then((result) => {
-                response.status(200).send({message: 'Page Update Success!'})
+                response.status(200).send({message: 'Обновление страницы успешно!'})
                 })
             .catch((error) => {
                 response.status(400).send({message: error.message})
@@ -74,9 +74,6 @@ class PageController {
         eventHandler.emit('redisUpdate');
 
     };
-
-    async getPageApi (request, response) {
-    }
 
 }
 

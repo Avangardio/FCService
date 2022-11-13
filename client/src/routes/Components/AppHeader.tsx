@@ -31,14 +31,16 @@ export default function AppHeader(){
 
     if(user) {
         pageCabinet = (
+            <>
+            <img className='ChatHeaderImage' src={user.profilePhoto}/>
             <div>
-                <img className='ChatHeaderImage' src={user.profilePhoto}/>
                 <div className='Cabinet'>
                     <span>{"Привет, " + user.firstName}</span>
                     <a onClick={() => navigate(`/${uId}`)}>Моя Страница</a>
                     <a onClick={() => navigate(`/logout`)}>Выйти</a>
                 </div>
             </div>
+            </>
         )
     }
 

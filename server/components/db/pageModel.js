@@ -16,7 +16,7 @@ const PageSchema = new mongoose.Schema({
     profilePhoto: {
         type: String,
         required: false,
-        default: "http://localhost:8080/static/no-photo.jpeg"
+        default: "https://avangardio-1.ru/static/no-photo.jpeg"
     },
 
     birthDay: {
@@ -28,7 +28,7 @@ const PageSchema = new mongoose.Schema({
     uId: {
         type: String,
         unique: true,
-        required: [true, 'Got an uId creation trouble.']
+        required: [true, 'Повторите попытку.']
     },
 
     friendRequests: {
