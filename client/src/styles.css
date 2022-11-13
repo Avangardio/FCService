@@ -8,7 +8,7 @@ div.AppHeader {
     border-bottom: #4d6c0b solid 1px;
     white-space: nowrap;
 }
-div.AppHeader div.Wrapper{
+div.Cabinet {
     position: absolute;
     top: 20px;
     right: 20px;
