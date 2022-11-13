@@ -31,7 +31,7 @@ class accountController {
                 let userData = await user.save();
                 request.session.user = user.uId;
                 response.status(201).send({
-                    message: "User Created Successfully",
+                    message: "Успешно",
                     userData,
                 });
 
@@ -40,7 +40,7 @@ class accountController {
            // catch error if the password hash isn't successful
            catch(error) {
                response.status(500).send({
-                   message: "Error Caused",
+                   message: "Ошибка",
                    error,
                });
            };
@@ -55,7 +55,7 @@ class accountController {
                await User.checkPassword(password, user.password)
                    .then((passwordCheck) => {
                        if (!passwordCheck) {
-                           throw new Error("Passwords does not match.")
+                           throw new Error("Неверный пароль.")
                        }
                        request.session.user = user.uId;
                        request.session.save(function (err) {
@@ -63,7 +63,7 @@ class accountController {
                        });
 
                        response.status(200).send({
-                           message: 'Login Удался',
+                           message: 'Успех',
                            registrationCompleted: page ? true : false,
                            user: user.uId
                        });
