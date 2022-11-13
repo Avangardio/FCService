@@ -31,7 +31,7 @@ export default function AppHeader(){
 
     if(user) {
         pageCabinet = (
-            <div className={'Wrapper'}>
+            <div>
                 <img className='ChatHeaderImage' src={user.profilePhoto}/>
                 <div className='Cabinet'>
                     <span>{"Привет, " + user.firstName}</span>
@@ -50,7 +50,7 @@ export default function AppHeader(){
           {isDesktopOrMobile ? <img className='TextHeader' src={'TextHeader.svg'}/> : null}
           <FindUsersChat source={'app'}/>
           {isDesktopOrMobile ? (pageCabinet ||
-              <div className='Wrapper'>
+              <div className='Cabinet'>
                   <span>Привет, Гость!</span>
                   <div onClick={() => navigate(`/login`)}>Войти</div>
                   <div onClick={() => navigate(`/registration`)}>Зарегистрироваться</div>
