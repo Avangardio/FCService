@@ -1,5 +1,5 @@
 export const logoutConfiguration = () => ({
     method: "get",
-    url: "https://avangardio-1.ru/account/logout",
+    url: "http://localhost:8080/account/logout",
     withCredentials: true
 });

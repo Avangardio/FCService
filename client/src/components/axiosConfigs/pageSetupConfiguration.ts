@@ -1,6 +1,6 @@
 export const pageSetupConfiguration = <AxiosPageDataTypes>(uId: AxiosPageDataTypes, data: AxiosPageDataTypes) => ({
     method: "post",
-    url: "https://avangardio-1.ru/page/pageSetup",
+    url: "http://localhost:8080/page/pageSetup",
     withCredentials: true,
     data: {
         uId: uId,

@@ -1,6 +1,6 @@
 export const loginConfiguration = <AxiosPageDataTypes>(email: AxiosPageDataTypes, password: AxiosPageDataTypes) => ({
     method: "post",
-    url: "https://avangardio-1.ru/account/login",
+    url: "http://localhost:8080/account/login",
     withCredentials: true,
     data: {
         email,

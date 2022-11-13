@@ -7,6 +7,6 @@ export class SocketIO {
     public static instance: SocketIO = new SocketIO();
 
     private constructor() {
-        this.socket = io("https://avangardio-1.ru/");
+        this.socket = io("http://localhost:8080/");
         }
 }

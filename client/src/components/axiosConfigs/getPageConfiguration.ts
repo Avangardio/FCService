@@ -1,5 +1,5 @@
 export const getPageConfiguration = (id: string) => ({
     method: "get",
-    url: `https://avangardio-1.ru/page/${id}`,
+    url: `http://localhost:8080/page/${id}`,
     withCredentials: true,
 });

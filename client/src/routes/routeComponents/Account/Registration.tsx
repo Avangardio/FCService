@@ -14,7 +14,7 @@ export default function Registration() {
         e.preventDefault();
         const configuration = {
             method: "post",
-            url: "https://avangardio-1.ru/account/register",
+            url: "http://localhost:8080/account/register",
             data: {
                 email,
                 password,
