@@ -2,7 +2,9 @@
 }
 
 /*AppHeader*/
-
+div.AppHeader img.ChatHeaderImage {
+    right: 250px;
+}
 div.AppHeader {
     background-color: #94bd35;
     border-bottom: #4d6c0b solid 1px;
@@ -13,6 +15,8 @@ div.Cabinet {
     top: 20px;
     right: 20px;
 }
+
+
 
 div.FindUsersInput.Mobile {
 
