@@ -88,17 +88,6 @@ console.log(token)
     res.send(decoded);
 });
 
-//todo я сделал хуйню для прода внизу :)
-
-/*const path = require('path');
-app.use(express.static(path.join('../', 'client/build')));
-// Return all the requests that don't fit to the list of controllers routes above to our React app.
-app.get('*', function(req, res) {
-    //console.log(path.join(__dirname, '../../client/build', 'index.html'))
-    res.sendFile(path.join(__dirname, '../../client/build', 'index.html'));
-    // this index.html is where our React production bundle lives.
-});*/
-
 const PORT = process.env.PORT || 8080;
 
 server.listen(PORT, hostname, async () => {
